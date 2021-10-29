@@ -1,0 +1,16 @@
+rule SOID=cutout-2
+RULE DEFINITION: if zone is greater than 7b goto question TREES question 3
+CONDITION: cutout and (zn ≥ 7)
+ACTIONS:
+<question soid="TREES question 3"/>
+<halt/>
+
+rule SOID=cutout-1
+RULE DEFINITION: if between zone 4a and 7b then put leave restriction on fact list
+CONDITION: cutout and (zn ≥ -1 and zn ≤ 6)
+ACTIONS:
+<assert fact="leaves D"/>
+<assert fact="leaves S"/>
+<question soid="TREES question 3"/>
+<halt/>
+

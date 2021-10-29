@@ -1,0 +1,13 @@
+rule SOID=mincheck-10-2
+RULE DEFINITION: 
+CONDITION: mincheck and minheight ≠ 10 and height = 10
+ACTIONS:
+<retract fact="mincheck "/>
+
+rule SOID=mincheck-10-1
+RULE DEFINITION: 
+CONDITION: mincheck and minheight = 10 and height = 10
+ACTIONS:
+<retract fact="mincheck "/>
+<retract fact="height 10"/>
+

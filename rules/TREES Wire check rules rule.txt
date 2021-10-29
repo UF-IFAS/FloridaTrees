@@ -1,0 +1,28 @@
+rule SOID=wire-25-2
+RULE DEFINITION: 
+CONDITION: wire-25 and (maxheight > 15)
+ACTIONS:
+<question soid="TREES wire 25"/>
+<halt/>
+
+rule SOID=wire-25-dc-2
+RULE DEFINITION: 
+CONDITION: wire-25-dc and (maxheight > 15)
+ACTIONS:
+<question soid="TREES wire 25 dc"/>
+<halt/>
+
+rule SOID=wire-25-1
+RULE DEFINITION: 
+CONDITION: wire-25 and (maxheight < 25)
+ACTIONS:
+<question soid="TREES question 9"/>
+<halt/>
+
+rule SOID=wire-25-dc-1
+RULE DEFINITION: 
+CONDITION: wire-25-dc and (maxheight < 25)
+ACTIONS:
+<question soid="TREES question 9"/>
+<halt/>
+

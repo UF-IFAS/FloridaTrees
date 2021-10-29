@@ -1,0 +1,266 @@
+<rules moduleSOID="TREES Check path rules rule">
+<rule SOID="checkpath-np-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=np}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES near a pool"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-10">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=q15}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-2">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=cq}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 3"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-3">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=q9}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 9"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-4">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="path"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=q10}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="or">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=25only}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="74"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 10"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-5">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="path"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=q10}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="lessthan">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 10 DOT"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-6">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=q10}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 10"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-7">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=q13}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 13"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-8">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=ttc}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<message soid="TREES MS LOW HEIGHT LIGHT"/>
+<question soid="TREES light distance"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="checkpath-np-9">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="path"/>
+  </argument1>
+  <argument2>
+<factvalue type="string" value="{1=q14}"/>
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 14"/>
+<halt/>
+</actions>
+</rule>
+
+</rules>

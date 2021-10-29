@@ -1,0 +1,955 @@
+<rules moduleSOID="TREES Planter rules rule">
+<rule SOID="zone-change-9">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="7"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 8a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-8">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="6"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 7b"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-7">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="5"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 7a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-6">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="4"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 6b"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-5">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="3"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 6a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-4">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="2"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 5b"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-3">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="1"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 5a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-2">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="0"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 4b"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-16">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="zone"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-7"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 2a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-15">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="zone"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-6"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 2a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-14">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="zone"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-5"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 2a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-13">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="zone"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-4"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 2b"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-12">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="zone"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-3"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 3a"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-11">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="zone"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-2"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 3b"/>
+</actions>
+</rule>
+
+<rule SOID="zone-change-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zone"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=change}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="-1"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zone 4a"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-0">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="planter"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="0"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn -2"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="planter"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="1"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn -1"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-11">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="planter"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-1"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn -3"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-13">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="planter"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-3"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn -5"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-14">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="planter"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-4"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn -6"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-15">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="planter"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-5"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn -7"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-2">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="planter"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="2"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn 0"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-4">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="planter"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="4"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn 2"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-7">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="planter"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="7"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn 5"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-3">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="planter"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="3"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn 1"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-5">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="planter"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="5"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn 3"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="put-it-in-a-planter-6">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="planter"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="zn"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="6"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn 4"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+<rule SOID="pu-it-in-a-planter-12">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="equal">
+  <argument1>
+<fact SOID="planter"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="-2"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="zn -4"/>
+<assert fact="zone change"/>
+</actions>
+</rule>
+
+</rules>

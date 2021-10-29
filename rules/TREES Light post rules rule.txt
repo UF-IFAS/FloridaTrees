@@ -1,0 +1,295 @@
+rule SOID=parking-lot-light-rule-13
+RULE DEFINITION: 
+CONDITION: dist-light = 20 and light-ht = 20 and maxheight < 25
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spreadcheck 25"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWIDE"/>
+
+rule SOID=parking-lot-light-rule-15
+RULE DEFINITION: 
+CONDITION: dist-light = 20 and (light-ht = 30 or light-ht = 40) and (maxheight = {1=25only} or maxheight = {1=50tall} or maxheight = 74)
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spreadcheck 25"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWIDE"/>
+
+rule SOID=parking-lot-light-rule-17
+RULE DEFINITION: 
+CONDITION: dist-light = 20 and light-ht = 50 and maxheight ≠ 74 and maxheight ≠ {1=25only} and maxheight ≠ {1=50tall} and (maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<question soid="TREES crown 20-50"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-2
+RULE DEFINITION: 
+CONDITION: dist-light = 10 and light-ht = 20 and maxheight < 25 and minheight = 100
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spreadcheck 6"/>
+<assert fact="path q10"/>
+<report soid="TREES RT FIVECOLTEN"/>
+
+rule SOID=parking-lot-light-rule-20
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and light-ht = 20 and maxheight < 25
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 35"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWDTHR"/>
+
+rule SOID=parking-lot-light-rule-22
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and light-ht = 30 and (maxheight = 74 or maxheight = {1=50tall} or maxheight = {1=25only})
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 35"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWDTHR"/>
+
+rule SOID=parking-lot-light-rule-24
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and (light-ht = 40 or light-ht = 50) and (maxheight = {1=50tall} or maxheight = {1=25only} or maxheight = 74)
+ACTIONS:
+<question soid="TREES crown 20 50 over"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-26
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and light-ht = 50 and maxheight < 25
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 6"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWDTHR"/>
+
+rule SOID=parking-lot-light-rule-27
+RULE DEFINITION: 
+CONDITION: dist-light = 35 and light-ht = 20 and (maxheight = {1=50tall} or maxheight = {1=25only} or maxheight > 15)
+ACTIONS:
+<question soid="TREES crown 35-20"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-28
+RULE DEFINITION: 
+CONDITION: dist-light = 35 and light-ht = 20 and maxheight < 25
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 35"/>
+<assert fact="path q10"/>
+<report soid="TREES RT WIDFIF"/>
+
+rule SOID=parking-lot-light-rule-29
+RULE DEFINITION: 
+CONDITION: dist-light = 35 and light-ht = 30
+ACTIONS:
+<question soid="TREES crown 35-35"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-30
+RULE DEFINITION: 
+CONDITION: dist-light = 35 and light-ht = 50
+ACTIONS:
+<question soid="TREES crown 35-50"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-31
+RULE DEFINITION: 
+CONDITION: (dist-light = 20 or dist-light = 25 or dist-light = 35) and light-ht = 60
+ACTIONS:
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="height 50"/>
+<report soid="TREES RT FIFTY"/>
+<assert fact="maxcheck 50"/>
+<assert fact="path q10"/>
+
+rule SOID=parking-lot-light-rule-4
+RULE DEFINITION: 
+CONDITION: dist-light = 10 and (light-ht = 30 or light-ht = 40) and maxheight ≠ 74 and maxheight ≠ {1=25only} and maxheight ≠ {1=50tall} and (maxheight = 15 or maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<question soid="TREES narrow or small 10-30"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-5
+RULE DEFINITION: 
+CONDITION: dist-light = 10 and (light-ht = 30 or light-ht = 40) and (maxheight = 74 or maxheight = {1=25only} or maxheight = {1=50tall})
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spreadcheck 6"/>
+<assert fact="path q10"/>
+<report soid="TREES RT FIVECOLTWE"/>
+
+rule SOID=parking-lot-light-rule-6
+RULE DEFINITION: 
+CONDITION: (dist-light = 10 or dist-light = 15) and light-ht = 50 and (maxheight = 74 or maxheight = {1=25only} or maxheight = {1=50tall})
+ACTIONS:
+<assert fact="height 25"/>
+<assert fact="maxcheck 25"/>
+<report soid="TREES RT MED TREE"/>
+<assert fact="path q10"/>
+
+rule SOID=parking-lot-light-rule-7
+RULE DEFINITION: 
+CONDITION: dist-light = 15 and light-ht = 20 and (maxheight = {1=50tall} or maxheight = {1=25only} or maxheight > 15)
+ACTIONS:
+<question soid="TREES narrow crown 15-20"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-12
+RULE DEFINITION: 
+CONDITION: dist-light = 20 and light-ht = 20 and (maxheight = {1=50tall} or maxheight = {1=25only} or maxheight > 15)
+ACTIONS:
+<question soid="TREES crown 20-20"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-18
+RULE DEFINITION: 
+CONDITION: dist-light = 20 and light-ht = 50 and (maxheight = {1=25only} or maxheight = {1=50tall} or maxheight = 74)
+ACTIONS:
+<question soid="TREES crown 20 50 over"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-16
+RULE DEFINITION: 
+CONDITION: dist-light = 20 and light-ht = 40 and maxheight ≠ 74 and maxheight ≠ {1=25only} and maxheight ≠ {1=50tall} and (maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<question soid="TREES crown 20-40"/>
+<halt/>
+
+rule SOID=lights-35-dist-35
+RULE DEFINITION: 
+CONDITION: dist-light = 35 and light-ht = 35
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spreadcheck 25"/>
+<assert fact="checkpath "/>
+<assert fact="path q10"/>
+
+rule SOID=parking-lot-light-rule-1
+RULE DEFINITION: 
+CONDITION: dist-light = 10 and light-ht = 20 and (maxheight = {1=25only} or maxheight = {1=50tall} or maxheight > 15)
+ACTIONS:
+<question soid="TREES narrow or tall 10-20"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-10
+RULE DEFINITION: 
+CONDITION: dist-light = 15 and (light-ht = 30 or light-ht = 40) and (maxheight = 74 or maxheight = {1=50tall} or maxheight = {1=25only})
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spreadcheck 15"/>
+<assert fact="path q10"/>
+<report soid="TREES RT TENCOLTWE"/>
+
+rule SOID=parking-lot-light-rule-11
+RULE DEFINITION: 
+CONDITION: (dist-light = 15 or dist-light = 10) and light-ht = 50 and maxheight ≠ 74 and maxheight ≠ {1=25only} and maxheight ≠ {1=50tall} and (maxheight = 15 or maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="maxcheck 25"/>
+<assert fact="path q10"/>
+<report soid="TREES RT ANYWDFIF"/>
+
+rule SOID=parking-lot-light-rule-14
+RULE DEFINITION: 
+CONDITION: dist-light = 20 and light-ht = 30 and maxheight ≠ {1=25only} and maxheight ≠ {1=50tall} and maxheight ≠ 74 and (maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<question soid="TREES crown 20-30"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-19
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and light-ht = 20 and (maxheight = {1=50tall} or maxheight = {1=25only} or maxheight > 15)
+ACTIONS:
+<question soid="TREES crown 25-20"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-25
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and light-ht = 50 and maxheight ≠ 74 and maxheight ≠ {1=50tall} and maxheight ≠ {1=25only} and (maxheight = 50 or maxheight = 25 or maxheight = 100)
+ACTIONS:
+<question soid="TREES crown 25-50"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-23
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and light-ht = 40 and maxheight ≠ 74 and maxheight ≠ {1=50tall} and maxheight ≠ {1=25only} and (maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<question soid="TREES crown 25-40"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-21
+RULE DEFINITION: 
+CONDITION: dist-light = 25 and light-ht = 30 and maxheight ≠ {1=25only} and maxheight ≠ {1=50tall} and maxheight ≠ 74 and (maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<question soid="TREES crown 25-30"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-3
+RULE DEFINITION: 
+CONDITION: dist-light = 10 and light-ht = 20 and maxheight < 25 and minheight = 10
+ACTIONS:
+<message soid="TREES MS CUTOUT DOT LIGHT"/>
+<question soid="TREES light move or end"/>
+<halt/>
+
+rule SOID=parking-lot-light-rule-8
+RULE DEFINITION: 
+CONDITION: dist-light = 15 and light-ht = 20 and maxheight < 25
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="path q10"/>
+<assert fact="spreadcheck 15"/>
+<report soid="TREES RT TENCOLTEN"/>
+
+rule SOID=parking-lot-light-rule-9
+RULE DEFINITION: 
+CONDITION: dist-light = 15 and (light-ht = 30 or light-ht = 40) and maxheight ≠ 74 and maxheight ≠ {1=25only} and maxheight ≠ {1=50tall} and (maxheight = 15 or maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<report soid="TREES RT SMMD TREE"/>
+<question soid="TREES very narrow or small 15-30"/>
+<halt/>
+
+rule SOID=light-height-20-dist-35
+RULE DEFINITION: 
+CONDITION: dist-light = 35 and light-ht = 20
+ACTIONS:
+<assert fact="checkpath "/>
+<assert fact="path q10"/>
+

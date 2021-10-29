@@ -1,0 +1,1129 @@
+<rules moduleSOID="TREES Max height rules for wires rule">
+<rule SOID="maxcheck-10-15-wires-4">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-15}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="lessthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="25"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=Y}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 15 ae"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-25-wires-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-25}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="10"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="interfere"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=N}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 25 train away"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-25-wires-3">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-25}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="lessthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="25"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=N}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 25 small or away"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-25-wires-4">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-25}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=N}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 25"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-25-wires-5">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-25}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=Y}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 25 dc"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-25-wires-6">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-25}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="15"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=N}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 25 ae"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-25-wires-7">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-25}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="lessthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="25"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=Y}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 25 small or away dc"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-6-10-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=6-10}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="minheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<message soid="TREES MS NOCUTWIRE"/>
+<question soid="TREES ground 15 ae"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-6-10-2">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=6-10}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="interfere"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=N}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<report soid="TREES RT LOWSIX"/>
+<assert fact="height 10"/>
+<assert fact="maxcheck 10"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-6-10-3">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=6-10}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="interfere"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=Y}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<report soid="TREES RT VERYLOWSIXBIG"/>
+<assert fact="height 10"/>
+<assert fact="maxcheck 10"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-15-wires-2">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-15}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="lessthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="25"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=N}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 15 ae"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-15-wires-3">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-15}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="interfere"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=Y}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="interfere"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=N}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 15"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-15-wires-5">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-15}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="interfere"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=Y}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 15 dc"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-25-wires-2">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-25}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="lessthan">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="interfere"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=N}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="10"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 25 ae"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-15-wires-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=10-15}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="15"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="10"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="minheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="10"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES ground 15 ae"/>
+<halt/>
+</actions>
+</rule>
+
+</rules>

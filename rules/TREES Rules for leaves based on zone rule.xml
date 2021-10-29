@@ -1,0 +1,84 @@
+<rules moduleSOID="TREES Rules for leaves based on zone rule">
+<rule SOID="cutout-2">
+<ruledefinition definition="if zone is greater than 7b goto question TREES question 3"/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+<fact SOID="cutout"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="greaterandequal">
+      <argument1>
+    <fact SOID="zn"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="7"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES question 3"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="cutout-1">
+<ruledefinition definition="if between zone 4a and 7b then put leave restriction on fact list"/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+<fact SOID="cutout"/>
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="greaterandequal">
+        <argument1>
+      <fact SOID="zn"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="-1"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="lessandequal">
+        <argument1>
+      <fact SOID="zn"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="6"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="leaves D"/>
+<assert fact="leaves S"/>
+<question soid="TREES question 3"/>
+<halt/>
+</actions>
+</rule>
+
+</rules>
