@@ -1,0 +1,117 @@
+rule SOID=buildcheck-story-trainover-7
+RULE DEFINITION: 
+CONDITION: buildingcheck and (height = 25 or height = 50 or height = 75 or height = {1=25only} or height = {1=50only}) and dist = 30 and (height ≠ 10 and height ≠ 15)
+ACTIONS:
+<report soid="TREES RT ANYTREETWE"/>
+<question soid="TREES question 14"/>
+<halt/>
+
+rule SOID=buildcheck-story-trainover-2
+RULE DEFINITION: 
+CONDITION: buildingcheck and (height = 25 or height = 50 or height = 75 or height = {1=25only} or height = {1=50only}) and bld = 3 and dist = 10 and (height ≠ 10 and height ≠ 15)
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spreadcheck 15"/>
+<assert fact="path q14"/>
+<report soid="TREES RT COLTREE"/>
+
+rule SOID=buildcheck-story-trainover-3
+RULE DEFINITION: 
+CONDITION: buildingcheck and (height = 25 or height = 50 or height = 75 or height = {1=25only} or height = {1=50only}) and bld = 3 and dist = 15 and (height ≠ 10 and height ≠ 15)
+ACTIONS:
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spreadcheck 25"/>
+<assert fact="path q14"/>
+<report soid="TREES RT NARTREE"/>
+
+rule SOID=buildcheck-story-trainover-4
+RULE DEFINITION: 
+CONDITION: buildingcheck and (height = 25 or height = 50 or height = 75 or height = {1=25only} or height = {1=50only}) and bld = 2 and dist = 15 and (height ≠ 10 and height ≠ 15)
+ACTIONS:
+<report soid="TREES RT ANYTREETEN"/>
+<question soid="TREES question 14"/>
+<halt/>
+
+rule SOID=buildcheck-story-trainover-6
+RULE DEFINITION: 
+CONDITION: buildingcheck and (height = 25 or height = 50 or height = 75 or height = {1=25only} or height = {1=50only}) and bld = 3 and dist = 20 and (height ≠ 10 and height ≠ 15)
+ACTIONS:
+<report soid="TREES RT NARTREEFIF"/>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 35"/>
+<assert fact="path q14"/>
+
+rule SOID=buildcheck-story-trainover-5
+RULE DEFINITION: 
+CONDITION: buildingcheck and (height = 25 or height = 50 or height = 75 or height = {1=25only} or height = {1=50only}) and bld = 2 and dist = 20 and (height ≠ 10 and height ≠ 15)
+ACTIONS:
+<report soid="TREES RT ANYTREEFIF"/>
+<question soid="TREES question 14"/>
+<halt/>
+
+rule SOID=buildingcheck-1
+RULE DEFINITION: 
+CONDITION: buildingcheck and dist = 10 and bld = 3 and (maxheight = 50 or maxheight = 25 or maxheight = 100)
+ACTIONS:
+<question soid="TREES bld 3 ht 10"/>
+<halt/>
+
+rule SOID=buildingcheck-2
+RULE DEFINITION: 
+CONDITION: buildingcheck and dist = 10 and bld = 2 and (maxheight = 25 or maxheight = 50 or maxheight = 100)
+ACTIONS:
+<question soid="TREES bld 2 ht 10"/>
+<halt/>
+
+rule SOID=buildingcheck-3
+RULE DEFINITION: 
+CONDITION: buildingcheck and bld = 2 and dist = 15 and (maxheight = 100 or maxheight = 25 or maxheight = 50)
+ACTIONS:
+<question soid="TREES bld 2 ht 15"/>
+<halt/>
+
+rule SOID=buildingcheck-4
+RULE DEFINITION: 
+CONDITION: buildingcheck and bld = 3 and dist = 15 and (maxheight = 100 or maxheight = 25 or maxheight = 50)
+ACTIONS:
+<question soid="TREES bld 3 ht 15"/>
+<halt/>
+
+rule SOID=buildingcheck-5
+RULE DEFINITION: 
+CONDITION: buildingcheck and bld = 2 and dist = 20 and (maxheight = 100 or maxheight = 25 or maxheight = 50)
+ACTIONS:
+<question soid="TREES bld 2 ht 20"/>
+<halt/>
+
+rule SOID=buildingcheck-6
+RULE DEFINITION: 
+CONDITION: buildingcheck and bld = 3 and dist = 20 and (maxheight = 100 or maxheight = 25 or maxheight = 50)
+ACTIONS:
+<question soid="TREES bld 3 ht 20"/>
+<halt/>
+
+rule SOID=buildingcheck-7
+RULE DEFINITION: 
+CONDITION: buildingcheck and dist = 30 and (maxheight = 100 or maxheight = 25 or maxheight = 50)
+ACTIONS:
+<question soid="TREES building height 30"/>
+<halt/>
+
+rule SOID=buildcheck-story-trainover-1
+RULE DEFINITION: 
+CONDITION: buildingcheck and (height = 25 or height = 50 or height = 75 or height = {1=25only} or height = {1=50only}) and bld = 2 and dist = 10 and (height ≠ 10 and height ≠ 15)
+ACTIONS:
+<report soid="TREES RT ANYTREE"/>
+<question soid="TREES question 14"/>
+<halt/>
+

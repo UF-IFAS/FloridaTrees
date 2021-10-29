@@ -1,0 +1,3163 @@
+<rules moduleSOID="TREES Light post rules rule">
+<rule SOID="parking-lot-light-rule-13">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="lessthan">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spreadcheck 25"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWIDE"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-15">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="30"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="40"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="74"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spreadcheck 25"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWIDE"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-17">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="74"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="25"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="50"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="100"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 20-50"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-2">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="lessthan">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="25"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="100"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spreadcheck 6"/>
+<assert fact="path q10"/>
+<report soid="TREES RT FIVECOLTEN"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-20">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="lessthan">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 35"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWDTHR"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-22">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="30"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="74"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 35"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWDTHR"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-24">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="40"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="50"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="74"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 20 50 over"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-26">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="lessthan">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 6"/>
+<assert fact="path q10"/>
+<report soid="TREES RT MEDWDTHR"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-27">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="35"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 35-20"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-28">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="35"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="lessthan">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spread 35"/>
+<assert fact="spreadcheck 35"/>
+<assert fact="path q10"/>
+<report soid="TREES RT WIDFIF"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-29">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="35"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="light-ht"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="30"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 35-35"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-30">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="35"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="light-ht"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="50"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 35-50"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-31">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="or">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="dist-light"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="20"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="dist-light"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="25"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="dist-light"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="35"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="light-ht"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="60"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="height 50"/>
+<report soid="TREES RT FIFTY"/>
+<assert fact="maxcheck 50"/>
+<assert fact="path q10"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-4">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="30"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="40"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="74"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="15"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="25"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="or">
+                  <argument1>
+                                  <mathtemplate type="equal">
+                    <argument1>
+                  <fact SOID="maxheight"/>
+                    </argument1>
+                    <argument2>
+                  <factvalue type="integer" value="50"/>
+                    </argument2>
+                  </mathtemplate>
+
+                  </argument1>
+                  <argument2>
+                                  <mathtemplate type="equal">
+                    <argument1>
+                  <fact SOID="maxheight"/>
+                    </argument1>
+                    <argument2>
+                  <factvalue type="integer" value="100"/>
+                    </argument2>
+                  </mathtemplate>
+
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES narrow or small 10-30"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-5">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="30"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="40"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="74"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spreadcheck 6"/>
+<assert fact="path q10"/>
+<report soid="TREES RT FIVECOLTWE"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-6">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="or">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="dist-light"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="10"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="dist-light"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="15"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="74"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="height 25"/>
+<assert fact="maxcheck 25"/>
+<report soid="TREES RT MED TREE"/>
+<assert fact="path q10"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-7">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES narrow crown 15-20"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-12">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 20-20"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-18">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="74"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 20 50 over"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-16">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="40"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="74"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="25"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="50"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="100"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 20-40"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="lights-35-dist-35">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="35"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="light-ht"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="35"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spread 25"/>
+<assert fact="spreadcheck 25"/>
+<assert fact="checkpath "/>
+<assert fact="path q10"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES narrow or tall 10-20"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-10">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="30"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="40"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="74"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="spreadcheck 15"/>
+<assert fact="path q10"/>
+<report soid="TREES RT TENCOLTWE"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-11">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="or">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="dist-light"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="15"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="dist-light"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="10"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="74"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="15"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="25"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="or">
+                  <argument1>
+                                  <mathtemplate type="equal">
+                    <argument1>
+                  <fact SOID="maxheight"/>
+                    </argument1>
+                    <argument2>
+                  <factvalue type="integer" value="50"/>
+                    </argument2>
+                  </mathtemplate>
+
+                  </argument1>
+                  <argument2>
+                                  <mathtemplate type="equal">
+                    <argument1>
+                  <fact SOID="maxheight"/>
+                    </argument1>
+                    <argument2>
+                  <factvalue type="integer" value="100"/>
+                    </argument2>
+                  </mathtemplate>
+
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="maxcheck 25"/>
+<assert fact="path q10"/>
+<report soid="TREES RT ANYWDFIF"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-14">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="30"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=25only}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="74"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="25"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="50"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="100"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 20-30"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-19">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="or">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="greaterthan">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 25-20"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-25">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="74"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="50"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="25"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="100"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 25-50"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-23">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="40"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="74"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=25only}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="25"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="50"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="100"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 25-40"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-21">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="30"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=25only}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="74"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="25"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="50"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="100"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES crown 25-30"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-3">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="lessthan">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="25"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="10"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<message soid="TREES MS CUTOUT DOT LIGHT"/>
+<question soid="TREES light move or end"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-8">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="light-ht"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="20"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="lessthan">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="spread 6"/>
+<assert fact="spread 10"/>
+<assert fact="spread 15"/>
+<assert fact="path q10"/>
+<assert fact="spreadcheck 15"/>
+<report soid="TREES RT TENCOLTEN"/>
+</actions>
+</rule>
+
+<rule SOID="parking-lot-light-rule-9">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="30"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="light-ht"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="40"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="notequal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="74"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="notequal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=25only}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="string" value="{1=50tall}"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="parenthesis">
+            <argument>
+                      <mathtemplate type="or">
+              <argument1>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="15"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument1>
+              <argument2>
+                          <mathtemplate type="or">
+                <argument1>
+                              <mathtemplate type="equal">
+                  <argument1>
+                <fact SOID="maxheight"/>
+                  </argument1>
+                  <argument2>
+                <factvalue type="integer" value="25"/>
+                  </argument2>
+                </mathtemplate>
+
+                </argument1>
+                <argument2>
+                              <mathtemplate type="or">
+                  <argument1>
+                                  <mathtemplate type="equal">
+                    <argument1>
+                  <fact SOID="maxheight"/>
+                    </argument1>
+                    <argument2>
+                  <factvalue type="integer" value="50"/>
+                    </argument2>
+                  </mathtemplate>
+
+                  </argument1>
+                  <argument2>
+                                  <mathtemplate type="equal">
+                    <argument1>
+                  <fact SOID="maxheight"/>
+                    </argument1>
+                    <argument2>
+                  <factvalue type="integer" value="100"/>
+                    </argument2>
+                  </mathtemplate>
+
+                  </argument2>
+                </mathtemplate>
+
+                </argument2>
+              </mathtemplate>
+
+              </argument2>
+            </mathtemplate>
+
+            </argument>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<report soid="TREES RT SMMD TREE"/>
+<question soid="TREES very narrow or small 15-30"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="light-height-20-dist-35">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="dist-light"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="35"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="light-ht"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="20"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+<assert fact="path q10"/>
+</actions>
+</rule>
+
+</rules>

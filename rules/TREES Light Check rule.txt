@@ -1,0 +1,49 @@
+rule SOID=Max Height 10-15.3
+RULE DEFINITION: If the conditions for maximum and minimum height are satisfied, ask how close is the nearest street light and parking lot light.
+CONDITION: ((check = {1=height}) and ((maxheight ≠ 10) and (maxheight ≠ 15)))
+ACTIONS:
+<question soid="TREES light distance"/>
+<halt/>
+
+rule SOID=Max Height 10-15.2
+RULE DEFINITION: If the conditions for maximum and minimum height are satisfied, ask a question  whether, the light is less than 5 feet away and less than 20 feet tall.
+CONDITION: ((check = {1=height}) and ((minheight = 10) and (maxheight = 15)))
+ACTIONS:
+<question soid="TREES low light small"/>
+<halt/>
+
+rule SOID=Max Height 10-15.1
+RULE DEFINITION: If the conditions for maximum and minimum height are satisfied, ask a question  whether, the light is less than 5 feet away and less than 20 feet tall.
+CONDITION: ((check = {1=height}) and ((minheight = 100) and ((maxheight = 10) or (maxheight = 15))))
+ACTIONS:
+<question soid="TREES low light"/>
+<halt/>
+
+rule SOID=Light Check 5.2
+RULE DEFINITION: If there are no wires, ask a question about the closeness of street lights or parking lot lights from the trees.
+CONDITION: (lightcheck5 and (wires = false))
+ACTIONS:
+<question soid="TREES light distance"/>
+<halt/>
+
+rule SOID=Light Check 5.1
+RULE DEFINITION: If wires are present, ask a question about the distance of the trees from the wires.
+CONDITION: (lightcheck5 and (wires = true))
+ACTIONS:
+<question soid="TREES lights wires 5"/>
+<halt/>
+
+rule SOID=Light Check 2
+RULE DEFINITION: If the fact lightcheck is present but wires are not, ask a question about how close are the street lights and parking lot lights from the trees.
+CONDITION: (lightcheck and (wires = false))
+ACTIONS:
+<question soid="TREES light distance"/>
+<halt/>
+
+rule SOID=Light Check 1
+RULE DEFINITION: If the fact lightcheck is present and so are wires, ask a question about how close will the trees be to the wires, after they are moved.
+CONDITION: (lightcheck and (wires = true))
+ACTIONS:
+<question soid="TREES lights wires"/>
+<halt/>
+

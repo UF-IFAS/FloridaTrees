@@ -1,0 +1,12 @@
+rule SOID=salt-question-2
+RULE DEFINITION: if (salt Q) is on the facts list and if zone is greater to 8a then goto TREES vandalism question
+CONDITION: (salt = {1=Q}) and (zn > 7)
+ACTIONS:
+<question soid="TREES vandalism question"/>
+
+rule SOID=salt-question-1
+RULE DEFINITION: if (salt Q) is on the facts list and if zone is less than or equal to 8a then goto TREES saltground question
+CONDITION: (salt = {1=Q}) and (zn ≤ 7)
+ACTIONS:
+<question soid="TREES saltground"/>
+

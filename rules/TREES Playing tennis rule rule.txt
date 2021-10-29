@@ -1,0 +1,14 @@
+rule SOID=play-tennis
+RULE DEFINITION: If the weather is sunny and the tennis court is empty, then you can play tennis today.
+CONDITION:  =  = 
+ACTIONS:
+<assert fact="play Yes"/>
+<halt/>
+
+rule SOID=do-not-play-tennis
+RULE DEFINITION: If, either the weather is not sunny or the court is not empty, then do not play tennis today
+CONDITION:  = 
+ACTIONS:
+<report soid="TREES LANDGOOD"/>
+<halt/>
+

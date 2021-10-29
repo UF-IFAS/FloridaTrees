@@ -1,0 +1,404 @@
+<rules moduleSOID="TREES Light Check rule">
+<rule SOID="Max Height 10-15.3">
+<ruledefinition definition="If the conditions for maximum and minimum height are satisfied, ask how close is the nearest street light and parking lot light."/>
+<condition>
+<mathtemplate type="parenthesis">
+  <argument>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="check"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=height}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="parenthesis">
+          <argument>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="10"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="parenthesis">
+          <argument>
+                  <mathtemplate type="notequal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES light distance"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="Max Height 10-15.2">
+<ruledefinition definition="If the conditions for maximum and minimum height are satisfied, ask a question  whether, the light is less than 5 feet away and less than 20 feet tall."/>
+<condition>
+<mathtemplate type="parenthesis">
+  <argument>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="check"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=height}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="parenthesis">
+          <argument>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="minheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="10"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="parenthesis">
+          <argument>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES low light small"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="Max Height 10-15.1">
+<ruledefinition definition="If the conditions for maximum and minimum height are satisfied, ask a question  whether, the light is less than 5 feet away and less than 20 feet tall."/>
+<condition>
+<mathtemplate type="parenthesis">
+  <argument>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="check"/>
+        </argument1>
+        <argument2>
+      <factvalue type="string" value="{1=height}"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="parenthesis">
+          <argument>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="minheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="100"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="parenthesis">
+          <argument>
+                  <mathtemplate type="or">
+            <argument1>
+                      <mathtemplate type="parenthesis">
+              <argument>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="10"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument>
+            </mathtemplate>
+
+            </argument1>
+            <argument2>
+                      <mathtemplate type="parenthesis">
+              <argument>
+                          <mathtemplate type="equal">
+                <argument1>
+              <fact SOID="maxheight"/>
+                </argument1>
+                <argument2>
+              <factvalue type="integer" value="15"/>
+                </argument2>
+              </mathtemplate>
+
+              </argument>
+            </mathtemplate>
+
+            </argument2>
+          </mathtemplate>
+
+          </argument>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES low light"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="Light Check 5.2">
+<ruledefinition definition="If there are no wires, ask a question about the closeness of street lights or parking lot lights from the trees."/>
+<condition>
+<mathtemplate type="parenthesis">
+  <argument>
+  <mathtemplate type="and">
+    <argument1>
+  <fact SOID="lightcheck5"/>
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="wires"/>
+        </argument1>
+        <argument2>
+      <factvalue type="boolean" value="false"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES light distance"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="Light Check 5.1">
+<ruledefinition definition="If wires are present, ask a question about the distance of the trees from the wires."/>
+<condition>
+<mathtemplate type="parenthesis">
+  <argument>
+  <mathtemplate type="and">
+    <argument1>
+  <fact SOID="lightcheck5"/>
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="wires"/>
+        </argument1>
+        <argument2>
+      <factvalue type="boolean" value="true"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES lights wires 5"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="Light Check 2">
+<ruledefinition definition="If the fact lightcheck is present but wires are not, ask a question about how close are the street lights and parking lot lights from the trees."/>
+<condition>
+<mathtemplate type="parenthesis">
+  <argument>
+  <mathtemplate type="and">
+    <argument1>
+  <fact SOID="lightcheck"/>
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="wires"/>
+        </argument1>
+        <argument2>
+      <factvalue type="boolean" value="false"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES light distance"/>
+<halt/>
+</actions>
+</rule>
+
+<rule SOID="Light Check 1">
+<ruledefinition definition="If the fact lightcheck is present and so are wires, ask a question about how close will the trees be to the wires, after they are moved."/>
+<condition>
+<mathtemplate type="parenthesis">
+  <argument>
+  <mathtemplate type="and">
+    <argument1>
+  <fact SOID="lightcheck"/>
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="wires"/>
+        </argument1>
+        <argument2>
+      <factvalue type="boolean" value="true"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument>
+</mathtemplate>
+
+</condition>
+<actions>
+<question soid="TREES lights wires"/>
+<halt/>
+</actions>
+</rule>
+
+</rules>

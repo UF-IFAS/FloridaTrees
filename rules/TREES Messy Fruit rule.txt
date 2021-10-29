@@ -1,0 +1,14 @@
+rule SOID=Messy trees restriction
+RULE DEFINITION: If messy trees exist and fruit characteristics are not known, then show a message about messy trees and ask if the user if messy trees need to be excluded for the list of trees.
+CONDITION: (messy and (frcar = {1=UN}))
+ACTIONS:
+<message soid="TREES MS MESS"/>
+<question soid="TREES question 1"/>
+
+rule SOID=Fruit litter not a problem
+RULE DEFINITION: If messy trees exist but fruits do not cause a litter problem, show a message about the nuisance of having trees with drooping branches and ask the user if trees with drooping branches could be excluded from the list of trees.
+CONDITION: (messy and (frcar = {1=NL}))
+ACTIONS:
+<message soid="TREES MS DROOP"/>
+<question soid="TREES question 2"/>
+

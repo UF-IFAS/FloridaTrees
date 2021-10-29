@@ -1,0 +1,137 @@
+rule SOID=gas-soil-clay-cap
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=Y} and soil-cover = 2 and (clay-cap = {1=N} or clay-cap = {1=Y})
+ACTIONS:
+<report soid="TREES RT LANDCOV"/>
+<assert fact="uses RC"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="soil DR"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 15"/>
+
+rule SOID=gas-soil-clay-cap-2
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=N} and soil-cover = 2 and clay-cap = {1=N}
+ACTIONS:
+<report soid="TREES RT LANDNOP"/>
+<assert fact="uses RC"/>
+<assert fact="soil DR"/>
+<assert fact="soil TW"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 15"/>
+
+rule SOID=gas-soil-clay-cap-3
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=N} and soil-cover = 2 and clay-cap = {1=Y}
+ACTIONS:
+<report soid="TREES RT LANDCAP"/>
+<assert fact="uses RC"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="soil DR"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 15"/>
+
+rule SOID=gas-soil-clay-cap-4
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=Y} and soil-cover = 4 and (clay-cap = {1=N} or clay-cap = {1=Y})
+ACTIONS:
+<report soid="TREES RT LANDMEDCOV"/>
+<assert fact="uses RC"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="soil DR"/>
+<assert fact="soil MD"/>
+<assert fact="density O"/>
+<assert fact="density M"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 25"/>
+
+rule SOID=gas-soil-clay-cap-5
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=N} and soil-cover = 4 and clay-cap = {1=N}
+ACTIONS:
+<report soid="TREES RT LANDTHNOP"/>
+<assert fact="density O"/>
+<assert fact="density M"/>
+<assert fact="uses RC"/>
+<assert fact="soil TW"/>
+<assert fact="soil DR"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 25"/>
+
+rule SOID=gas-soil-clay-cap-6
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=N} and soil-cover = 4 and clay-cap = {1=Y}
+ACTIONS:
+<report soid="TREES RT LANDMEDCAP"/>
+<assert fact="uses RC"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="soil DR"/>
+<assert fact="soil MD"/>
+<assert fact="density O"/>
+<assert fact="density M"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 25"/>
+
+rule SOID=gas-soil-clay-cap-7
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=Y} and soil-cover = 5 and (clay-cap = {1=N} or clay-cap = {1=Y})
+ACTIONS:
+<report soid="TREES RT LANDGOOD"/>
+<assert fact="uses RC"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="height 50"/>
+<assert fact="soil MD"/>
+<assert fact="soil DR"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 50"/>
+
+rule SOID=gas-soil-clay-cap-8
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=N} and soil-cover = 5 and clay-cap = {1=N}
+ACTIONS:
+<report soid="TREES RT LANDTHCOV"/>
+<assert fact="uses RC"/>
+<assert fact="soil TW"/>
+<assert fact="soil DR"/>
+<assert fact="soil MD"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 25"/>
+
+rule SOID=gas-soil-clay-cap-9
+RULE DEFINITION: 
+CONDITION: bio-gas = {1=N} and soil-cover = 5 and clay-cap = {1=Y}
+ACTIONS:
+<report soid="TREES RT LANDTHCAP"/>
+<assert fact="uses RC"/>
+<assert fact="height 10"/>
+<assert fact="height 15"/>
+<assert fact="height 25"/>
+<assert fact="soil DR"/>
+<assert fact="soil MD"/>
+<assert fact="density O"/>
+<assert fact="density M"/>
+<assert fact="check-irri "/>
+<assert fact="maxcheck 25"/>
+
+rule SOID=check-for-irri
+RULE DEFINITION: 
+CONDITION: check-irri and (irri = {1=I} or irri = {1=O})
+ACTIONS:
+<retract fact="uses RC"/>
+

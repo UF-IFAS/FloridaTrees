@@ -1,0 +1,94 @@
+rule SOID=clay-compacted
+RULE DEFINITION: 
+CONDITION: (soil = {1=CL}) and (density = {1=COMPACTED}) and (drainage confirmation = true) and ((drain = {1=WD}) or (drain = {1=EXWD}))
+ACTIONS:
+<question soid="TREES compacted well drained"/>
+
+rule SOID=highzone-hwt-irri-e
+RULE DEFINITION: if irrigation is established and drainage is high water table and zone is anything and if zone is greater than or equal to 9a or less than or equal to 11 then put (soil MD)(soil DR) on facts list
+CONDITION: irri = {1=E} and drain = {1=HWT} and (zn ≥ 9 and zn ≤ 13)
+ACTIONS:
+<assert fact="soil MD"/>
+<assert fact="soil DR"/>
+
+rule SOID=highzone-irri-o-dr-wd-exwd
+RULE DEFINITION: if drainage is well drained or exceedingly well drained and irrigation is occasional and if zone is greater than or equal to 9a and less than or equal to 11 then put (soil DR)(soil MD) on facts list
+CONDITION: (drain = {1=WD} or drain = {1=EXWD}) and irri = {1=O} and (zn ≥ 9 and zn ≤ 13)
+ACTIONS:
+<assert fact="soil DR"/>
+<assert fact="soil MD"/>
+
+rule SOID=highzone-wd-exwd-irri-e
+RULE DEFINITION: 
+CONDITION: (drain = {1=WD} or drain = {1=EXWD}) and irri = {1=E} and (zn ≥ 9 and zn ≤ 13)
+ACTIONS:
+<assert fact="soil DR"/>
+
+rule SOID=loose-clay
+RULE DEFINITION: if soil is clay and density is loose then goto TREES loose clay
+CONDITION: soil = {1=CL} and density = {1=LOOSE}
+ACTIONS:
+<question soid="TREES loose clay"/>
+<halt/>
+
+rule SOID=loose-sand-or-loam
+RULE DEFINITION: 
+CONDITION: density = {1=LOOSE} and (soil = {1=SA} or soil = {1=LO})
+ACTIONS:
+<question soid="TREES water drainage"/>
+
+rule SOID=lowzone-irri-e-wd-exwd
+RULE DEFINITION: if drainage is well drained or exceedingly well drained and irrigation is established and zone is greater than or equal to 4 and less than or equal to 8b then put (soil DR)(soil MD) on facts list
+CONDITION: (drain = {1=WD} or drain = {1=EXWD}) and irri = {1=E} and (zn ≥ -1 and zn ≤ 8)
+ACTIONS:
+<assert fact="soil DR"/>
+<assert fact="soil MD"/>
+
+rule SOID=no-irri-hwt
+RULE DEFINITION: if drainage is high water table and irrigation is no, put (soil DR)(soil MD) on facts list
+CONDITION: drain = {1=HWT} and irri = {1=N}
+ACTIONS:
+<assert fact="soil DR"/>
+<assert fact="soil MD"/>
+
+rule SOID=no-irri-wd-exwd
+RULE DEFINITION: if drainage is well drained or exceedingly well drained and irrigation is no, then put (soil DR) on facts list
+CONDITION: (drain = {1=WD} or drain = {1=EXWD}) and irri = {1=N}
+ACTIONS:
+<assert fact="soil DR"/>
+
+rule SOID=not-clay-and-well-drained-1
+RULE DEFINITION: If soil is loam or sand and if drainage is well drained or exceedingly well drained and if density is compacted then goto TREES compacted soil
+CONDITION: (soil = {1=LO} or soil = {1=SA}) and (drain = {1=WD} or drain = {1=EXWD}) and density = {1=COMPACTED}
+ACTIONS:
+<question soid="TREES compacted soil"/>
+
+rule SOID=vand-yes-rule
+RULE DEFINITION: 
+CONDITION: crime = {1=Y} and irri = {1=N}
+ACTIONS:
+<message soid="TREES MS WATER NO TREES"/>
+<report soid="TREES RT NOIRVAND"/>
+<question soid="TREES end crime"/>
+<halt/>
+
+rule SOID=clay-and-well-drained
+RULE DEFINITION: 
+CONDITION: (soil = {1=CL}) and (drainage confirmation = false) and ((drain = {1=WD}) or (drain = {1=EXWD}))
+ACTIONS:
+<question soid="TREES clay and well drained?"/>
+
+rule SOID=Loose sand or loam rule
+RULE DEFINITION: If the user indicated that the soil density is loose and the soil types are either sandy or loamy, then ask user how fast does water drain through the soil.
+CONDITION: soil-density = {1=Loose} and (soil-type = {1=Sand} or soil-type = {1=Loam})
+ACTIONS:
+<question soid="TREES water drainage"/>
+<halt/>
+
+rule SOID=Loose clay rule
+RULE DEFINITION: If the soil is of type clay and the soil density is loose, then ask a question that confirms the users' asserting that the soil is indeed loose. Experts believe that many clay soils in urban areas are compacted
+CONDITION: soil-type = {1=Clay} and soil-density = {1=Loose}
+ACTIONS:
+<question soid="TREES loose clay"/>
+<halt/>
+

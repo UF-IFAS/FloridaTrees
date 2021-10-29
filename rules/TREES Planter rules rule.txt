@@ -1,0 +1,181 @@
+rule SOID=zone-change-9
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 7
+ACTIONS:
+<assert fact="zone 8a"/>
+
+rule SOID=zone-change-8
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 6
+ACTIONS:
+<assert fact="zone 7b"/>
+
+rule SOID=zone-change-7
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 5
+ACTIONS:
+<assert fact="zone 7a"/>
+
+rule SOID=zone-change-6
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 4
+ACTIONS:
+<assert fact="zone 6b"/>
+
+rule SOID=zone-change-5
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 3
+ACTIONS:
+<assert fact="zone 6a"/>
+
+rule SOID=zone-change-4
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 2
+ACTIONS:
+<assert fact="zone 5b"/>
+
+rule SOID=zone-change-3
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 1
+ACTIONS:
+<assert fact="zone 5a"/>
+
+rule SOID=zone-change-2
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = 0
+ACTIONS:
+<assert fact="zone 4b"/>
+
+rule SOID=zone-change-16
+RULE DEFINITION: 
+CONDITION: zone =  and zn = -7
+ACTIONS:
+<assert fact="zone 2a"/>
+
+rule SOID=zone-change-15
+RULE DEFINITION: 
+CONDITION: zone =  and zn = -6
+ACTIONS:
+<assert fact="zone 2a"/>
+
+rule SOID=zone-change-14
+RULE DEFINITION: 
+CONDITION: zone =  and zn = -5
+ACTIONS:
+<assert fact="zone 2a"/>
+
+rule SOID=zone-change-13
+RULE DEFINITION: 
+CONDITION: zone =  and zn = -4
+ACTIONS:
+<assert fact="zone 2b"/>
+
+rule SOID=zone-change-12
+RULE DEFINITION: 
+CONDITION: zone =  and zn = -3
+ACTIONS:
+<assert fact="zone 3a"/>
+
+rule SOID=zone-change-11
+RULE DEFINITION: 
+CONDITION: zone =  and zn = -2
+ACTIONS:
+<assert fact="zone 3b"/>
+
+rule SOID=zone-change-1
+RULE DEFINITION: 
+CONDITION: zone = {1=change} and zn = -1
+ACTIONS:
+<assert fact="zone 4a"/>
+
+rule SOID=put-it-in-a-planter-0
+RULE DEFINITION: 
+CONDITION: planter =  and zn = 0
+ACTIONS:
+<assert fact="zn -2"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-1
+RULE DEFINITION: 
+CONDITION: planter = {1=Y} and zn = 1
+ACTIONS:
+<assert fact="zn -1"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-11
+RULE DEFINITION: 
+CONDITION: planter =  and zn = -1
+ACTIONS:
+<assert fact="zn -3"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-13
+RULE DEFINITION: 
+CONDITION: planter =  and zn = -3
+ACTIONS:
+<assert fact="zn -5"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-14
+RULE DEFINITION: 
+CONDITION: planter =  and zn = -4
+ACTIONS:
+<assert fact="zn -6"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-15
+RULE DEFINITION: 
+CONDITION: planter =  and zn = -5
+ACTIONS:
+<assert fact="zn -7"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-2
+RULE DEFINITION: 
+CONDITION: planter = {1=Y} and zn = 2
+ACTIONS:
+<assert fact="zn 0"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-4
+RULE DEFINITION: 
+CONDITION: planter = {1=Y} and zn = 4
+ACTIONS:
+<assert fact="zn 2"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-7
+RULE DEFINITION: 
+CONDITION: planter = {1=Y} and zn = 7
+ACTIONS:
+<assert fact="zn 5"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-3
+RULE DEFINITION: 
+CONDITION: planter = {1=Y} and zn = 3
+ACTIONS:
+<assert fact="zn 1"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-5
+RULE DEFINITION: 
+CONDITION: planter = {1=Y} and zn = 5
+ACTIONS:
+<assert fact="zn 3"/>
+<assert fact="zone change"/>
+
+rule SOID=put-it-in-a-planter-6
+RULE DEFINITION: 
+CONDITION: planter = {1=Y} and zn = 6
+ACTIONS:
+<assert fact="zn 4"/>
+<assert fact="zone change"/>
+
+rule SOID=pu-it-in-a-planter-12
+RULE DEFINITION: 
+CONDITION: planter =  and zn = -2
+ACTIONS:
+<assert fact="zn -4"/>
+<assert fact="zone change"/>
+

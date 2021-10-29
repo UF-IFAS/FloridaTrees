@@ -1,0 +1,2131 @@
+<rules moduleSOID="TREES Max height rules rule">
+<rule SOID="maxcheck-50-15">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="50"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="15"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="50"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="25"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50-50tall">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="50"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=50tall}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="15"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="10"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-10">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path retbld"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-25">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="checkpath50 "/>
+<assert fact="path 25q13"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-25only">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=25only}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path 25oq13"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-50">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="10"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="15"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path 50q13"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-50-minheight10">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="10"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="15"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path 50q13"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-50tall">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path 50q13"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-75">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="75"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="75"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path 50q13"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-UN">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="100"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path 50q13"/>
+<assert fact="height 25"/>
+<assert fact="height 50"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-75-tall-un-1">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxcheck"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=75tall}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="100"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="maxheight 74"/>
+<assert fact="checkpath "/>
+<assert fact="height 75"/>
+<assert fact="height 25"/>
+<assert fact="height 50"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-75tall-25">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=75tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="10"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="15"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 25only"/>
+<assert fact="checkpath "/>
+<report soid="TREES RT PRUNELT"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-75tall-25only">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxcheck"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=75tall}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=25only}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-75tall-50">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=75tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="10"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="15"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 50tall"/>
+<assert fact="checkpath "/>
+<report soid="TREES RT PRUNELT"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-75tall-50tall">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxcheck"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=75tall}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=50tall}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-75tall-74">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxcheck"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=75tall}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="74"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxheight-10-15">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="15"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="15"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="100"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 10"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxheight-10-25">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="parenthesis">
+        <argument>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="maxheight"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="25"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="100"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 10"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxheight-10-50">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="parenthesis">
+        <argument>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="height"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="50"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="and">
+            <argument1>
+                      <mathtemplate type="equal">
+              <argument1>
+            <fact SOID="height"/>
+              </argument1>
+              <argument2>
+            <factvalue type="integer" value="25"/>
+              </argument2>
+            </mathtemplate>
+
+            </argument1>
+            <argument2>
+                      <mathtemplate type="equal">
+              <argument1>
+            <fact SOID="height"/>
+              </argument1>
+              <argument2>
+            <factvalue type="integer" value="15"/>
+              </argument2>
+            </mathtemplate>
+
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="minheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="100"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 100"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50-10">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="50"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="10"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="50"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="and">
+          <argument1>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="height"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="25"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument1>
+          <argument2>
+                  <mathtemplate type="equal">
+            <argument1>
+          <fact SOID="height"/>
+            </argument1>
+            <argument2>
+          <factvalue type="integer" value="15"/>
+            </argument2>
+          </mathtemplate>
+
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50tall-15">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=50tall}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath50 "/>
+<assert fact="path retbld"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50-25">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="50"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50-25only">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="50"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=25only}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-50-50-un">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="50"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="or">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="50"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="100"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 50"/>
+<assert fact="mincheck "/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-15-10">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="10"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="15"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-15-25">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="maxheight 15"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-15-50">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="50"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="string" value="{1=50tall}"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="25"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="50"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="maxheight 15"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-15-un">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="15"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="or">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="100"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="15"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="maxheight 15"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-25-10">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="10"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="and">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="25"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="height"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="15"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-25-15">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="15"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="25"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+<assert fact="mincheck "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-25-25only">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxheight"/>
+    </argument1>
+    <argument2>
+  <factvalue type="string" value="{1=25only}"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-25-50">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="maxheight 25"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-25-50tall">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="string" value="{1=50tall}"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="50"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 25only"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-25-74">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="74"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="and">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="75"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="height"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="50"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 25only"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-25-good">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="25"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="parenthesis">
+    <argument>
+      <mathtemplate type="or">
+      <argument1>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="25"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument1>
+      <argument2>
+          <mathtemplate type="equal">
+        <argument1>
+      <fact SOID="maxheight"/>
+        </argument1>
+        <argument2>
+      <factvalue type="integer" value="100"/>
+        </argument2>
+      </mathtemplate>
+
+      </argument2>
+    </mathtemplate>
+
+    </argument>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="mincheck "/>
+<assert fact="maxheight 25"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-30-75">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="30"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="maxheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="75"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="height"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="75"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 30"/>
+<assert fact="mincheck "/>
+<assert fact="checkpath "/>
+<assert fact="path q14"/>
+</actions>
+</rule>
+
+<rule SOID="maxcheck-10-un">
+<ruledefinition definition=""/>
+<condition>
+<mathtemplate type="and">
+  <argument1>
+  <mathtemplate type="equal">
+    <argument1>
+  <fact SOID="maxcheck"/>
+    </argument1>
+    <argument2>
+  <factvalue type="integer" value="10"/>
+    </argument2>
+  </mathtemplate>
+
+  </argument1>
+  <argument2>
+  <mathtemplate type="and">
+    <argument1>
+      <mathtemplate type="parenthesis">
+      <argument>
+          <mathtemplate type="or">
+        <argument1>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="100"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument1>
+        <argument2>
+              <mathtemplate type="equal">
+          <argument1>
+        <fact SOID="maxheight"/>
+          </argument1>
+          <argument2>
+        <factvalue type="integer" value="10"/>
+          </argument2>
+        </mathtemplate>
+
+        </argument2>
+      </mathtemplate>
+
+      </argument>
+    </mathtemplate>
+
+    </argument1>
+    <argument2>
+      <mathtemplate type="equal">
+      <argument1>
+    <fact SOID="minheight"/>
+      </argument1>
+      <argument2>
+    <factvalue type="integer" value="100"/>
+      </argument2>
+    </mathtemplate>
+
+    </argument2>
+  </mathtemplate>
+
+  </argument2>
+</mathtemplate>
+
+</condition>
+<actions>
+<assert fact="maxheight 10"/>
+<assert fact="checkpath "/>
+</actions>
+</rule>
+
+</rules>
