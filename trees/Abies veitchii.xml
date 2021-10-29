@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><tree>
+  <foliage>
+    <shape>needle-like (filiform)</shape>
+    <summercolor>green</summercolor>
+    <spiny>no</spiny>
+    <type>simple</type>
+    <arrangement>spiral</arrangement>
+    <bladelength>less than 2 inches</bladelength>
+    <venation>parallel</venation>
+    <fallcharacteristics>not showy</fallcharacteristics>
+    <margin>entire</margin>
+    <fallcolor>no color change</fallcolor>
+    <persistence>needled evergreen</persistence>
+  </foliage>
+  <pestresistance>sensitive to pests/diseases</pestresistance>
+  <lifespan>more than 50 years</lifespan>
+  <culturetolerances>
+    <saltspraytolerance>none</saltspraytolerance>
+    <soilphtolerance>acidic</soilphtolerance>
+    <lightrequirements>full sun</lightrequirements>
+    <soilsalttolerance>unknown</soilsalttolerance>
+    <droughttolerance>little</droughttolerance>
+    <soildrainagetolerance>well-drained</soildrainagetolerance>
+    <soiltexturetolerance>sand</soiltexturetolerance>
+  </culturetolerances>
+  <flower>
+    <season>flowers in winter</season>
+    <color>unknown</color>
+    <fragrance>no</fragrance>
+    <showiness>not showy</showiness>
+  </flower>
+  <diseases/>
+  <planttype>tree</planttype>
+  <use>specimen</use>
+  <usdahardinesszone>3A-6B</usdahardinesszone>
+  <nativeorigin>
+    <nativestate>Not Native to Any State</nativestate>
+    <nativetonorthamerica>no</nativetonorthamerica>
+    <recommendedfordryclimates>no</recommendedfordryclimates>
+    <nativefloridacounty>Not Native to Florida</nativefloridacounty>
+  </nativeorigin>
+  <size>
+    <height>over 75 feet</height>
+    <maturespread>25 to 35 feet</maturespread>
+    <maintainableheight>not suitable for clipping</maintainableheight>
+    <matureheight>50 to 75 feet</matureheight>
+    <spread>25 to 35 feet</spread>
+  </size>
+  <factsheet/>
+  <trunkandbranches>
+    <currentyeartwigcolor>green, brown</currentyeartwigcolor>
+    <numberoftrunks>typically one trunk</numberoftrunks>
+    <pruningrequirement>little required</pruningrequirement>
+    <showiness>not showy</showiness>
+    <currentyeartwigthickness>medium</currentyeartwigthickness>
+    <trunkandbranchbreakage>resistant</trunkandbranchbreakage>
+    <woodspecificgravity>unknown</woodspecificgravity>
+    <branchdrooping>branches droop</branchdrooping>
+    <crownshaft>not applicable</crownshaft>
+    <barkthickness>thick</barkthickness>
+    <thorns>no</thorns>
+  </trunkandbranches>
+  <pests/>
+  <fruit>
+    <composition>dry or hard</composition>
+    <attractiontowildlife>unknown</attractiontowildlife>
+    <edible>no</edible>
+    <shape>cone</shape>
+    <showiness>not showy</showiness>
+    <length>1 to 3 inches</length>
+    <persistant>yes</persistant>
+    <litter>fruit/leaves not a litter problem</litter>
+    <color>blue, purple</color>
+  </fruit>
+  <name>
+    <listingname>Veitch Fir</listingname>
+    <family>Pinaceae</family>
+    <pronunciation>A-beez VEECH-ee-eye</pronunciation>
+    <species>veitchii</species>
+    <genus>Abies</genus>
+    <cultivar/>
+    <commonname>Veitch Fir</commonname>
+  </name>
+  <photographs>
+  </photographs>
+  <crowncanopy>
+    <texture>medium</texture>
+    <density>open</density>
+    <shape>upright/erect</shape>
+    <uniformity>symmetrical</uniformity>
+  </crowncanopy>
+  <other>
+    <verticilliumwilt>resistant</verticilliumwilt>
+    <outstandingtree>yes</outstandingtree>
+    <winterinterest>yes</winterinterest>
+    <invasivepotential>not assessed or incomplete data</invasivepotential>
+    <surfacerooting>not a problem</surfacerooting>
+    <availability>rarely available</availability>
+    <ozonesensitivity>unknown</ozonesensitivity>
+  </other>
+  <descriptivetext/>
+  <growthrate>slow, moderate</growthrate>
+</tree>
