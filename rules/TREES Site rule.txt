@@ -1,7 +1,0 @@
-rule SOID=site-questions
-RULE DEFINITION: if site is on facts list, goto TREES site selection
-CONDITION: site and 
-ACTIONS:
-<question soid="TREES site selection"/>
-<halt/>
-
