@@ -1,5 +1,5 @@
 Archive of data from Florida Trees project
-ProjectURL:  http://lyra.ifas.ufl.edu/FloridaTrees
+Project URL:  http://lyra.ifas.ufl.edu/FloridaTrees
 
 trees.zip - XML files containing data for each tree
 rules.zip - expert system rules in three formats: xml, txt, clp (CLIPS file).  Rules are grouped into modules (each file is a module).
