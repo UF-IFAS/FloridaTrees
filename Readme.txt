@@ -6,4 +6,4 @@ rules.zip - expert system rules in three formats: xml, txt, clp (CLIPS file).  R
 questions.xml - questions from the expert system
 messages.xml - messages from the expert system
 reports.xml - reports from the expert system
-VRDemo.zip - contains inages and videos for Florida Trees VR Prototype
+VRDemo - Folder contains image and video file for VR Prototype
